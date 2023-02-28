@@ -1,0 +1,152 @@
+<!-- server: https://cws.auckland.ac.nz/gas/swagger/index.html -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kyil067 | CS335 A3</title>
+        <link href="kyil067.css" rel="stylesheet" type="text/css"/>
+        <script type="text/javascript" src="kyil067.js"></script>
+        <link rel="icon" type="image/x-icon" alt="zubat" href="https://cws.auckland.ac.nz/gas/api/FavIcon">
+    </head>
+
+    <body onload="nav('home')">
+        <!-- ------------------------- Nav ------------------------- -->
+        <header id="nav-bar">
+            <table id="table-pages">
+                <tr id="nav-pages" style="cursor: pointer;">
+                    <td id="homeTab" onclick="nav('home')">HOME</td>
+                    <td id="nav-spacer"> | </td>
+                    <td id="shopTab" onclick="nav('shop')">SHOP</td>
+                    <td id="nav-spacer"> | </td>
+                    <td id="gameTab" onclick="nav('game')">GAME</td>
+                </tr>
+            </table>
+            <table id="table-auth">
+                <tr id="nav-auth" style="cursor: pointer;">
+                    <td id="guestBookTab" onclick="nav('guestBook')">Guest Book</td>
+                    <td id="nav-spacer"> | </td>
+                    <td class="button" id="registrationTab" onclick="nav('registration')">REGISTER</td>
+                    <td class="button" id="loginTab" onclick="nav('login')">LOGIN</td>
+                </tr>
+            </table>
+        </header>
+
+        <!-- ----------------------- PAGES ------------------------ -->
+        <!-- ------------------------ Home ------------------------ -->
+        <div id="home">
+            <div id="welcome-tab">
+                <h3>WELCOME TO GAME ACADEMY</h3>
+                <img id="logo" alt="GA-Logo" src="https://cws.auckland.ac.nz/gas/api/LogoColoured?colour=white"/>
+            </div>
+            <div id="home-content">
+                <p>Play to your heart's desire</p>
+            </div>
+        </div>
+
+        <!-- ------------------------ Shop ------------------------ -->
+        <div id="shop">
+            <div id="page-header">
+                <h3>SHOP</h3>
+            </div>
+
+            <div id="search-bar">
+                Search for an item <input type="search" name="Search" placeholder="Search for an item..." oninput="search_item()" id="item" value="">
+
+                <div>
+                    <table id="search-table"></table>
+                </div>
+
+                <br>
+            </div>
+            
+            <div>
+                <table id="shop-table"></table>
+            </div>
+        </div>
+
+        <!-- ------------------------ Game ------------------------ -->
+        <div id="game">
+            <div id="page-header">
+                <h3>CHESS</h3>
+                <div id="game-heading"></div>
+            </div>
+
+            <button id="play-button" class="play-button" onclick="initialise_game()">Play now!</button>
+
+            <div id="game-state"></div>
+            
+            <div id="chess-game" style="display: none;">
+                <table class="chessboard-table" id="chessboard-table"></table>
+
+                <br>
+
+                <div id="game-buttons">
+                    <button class="game-button" id="submit-move" onclick="submit_move()">Submit move</button><br>
+                    <button class="game-button" id="get-move" onclick="get_next_move()">Get opponent's move</button><br>
+                    <button class="game-button" id="quit-game" onclick="quit_game()">Quit game</button><br>
+                </div>
+            </div>
+        </div>
+
+        <!-- ----------------------- Comment ---------------------- -->
+        <div id="guestBook">
+            <div id="page-header">
+                <h3>GUEST BOOK</h3>
+            </div>
+            
+            <div class="row">
+                <div class="column">
+                    <div id="comment-form">
+                        Comment <input type="text" name="comment" placeholder="Leave a comment!" id="comment" value="" required><br><br>
+                        Name <input type="text" name="name" placeholder="Enter your name" id="name" value="">
+                        <input type="submit" onclick="write_comment()">
+                    </div>
+                </div>
+
+                <div class="column">
+                    <p>Recent comments</p>
+                    <iframe id="comments-frame" src="https://cws.auckland.ac.nz/gas/api/Comments"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- ----------------------- Login ------------------------ -->
+        <div id="login">
+            <div id="page-header">
+                <h3>LOGIN</h3>
+            </div>
+
+            <div id="login-form">
+                <div class="login-form" method="post">
+                    <p>Username</p> <input type="text" name="Username" placeholder="Enter Username" id="username-login" value="" required>
+                    <p>Password</p> <input type="password" name="Password" placeholder="Enter Password" id="password-login" value="" required><br><br>
+                    <input class="shop-button" type="submit" name="Register" onclick="login()">
+                </div>
+            </div>
+
+            <div id="login-response"></div>
+        </div>
+
+        <!-- ---------------------- Register ---------------------- -->
+        <div id="registration">
+            <div id="page-header">
+                <h3>REGISTER</h3>
+            </div>
+
+            <div id="registration-form">
+                <div class="registration-form" method="post">
+                    <p>Username</p> <input type="text" name="Username" placeholder="Enter Username" id="username" value="" required>
+                    <p>Password</p> <input type="password" name="Password" placeholder="Enter Password" id="password" value="" required>
+                    <p>Address <em>(not required)</em></p> <input type="text" name="Address" placeholder="Enter Address" id="address" value=""><br><br>
+                    <input class="shop-button" type="submit" name="Register" onclick="register()">
+                </div>
+            </div>
+
+            <div id="registration-response"></div>
+        </div>
+
+        <!-- ------------------------ Foot ------------------------ -->
+        <footer>
+            <p id="footer-version"></p>
+        </footer>
+    </body>
+</html>

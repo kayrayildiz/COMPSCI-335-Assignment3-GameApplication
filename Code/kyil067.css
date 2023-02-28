@@ -1,0 +1,338 @@
+html, body {
+    margin: 0%;
+    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+    letter-spacing: 0.2ch;
+    height: 100%;
+    display: table;
+    width: 100%;
+    background-image: linear-gradient(to right, rgb(120, 86, 221) , rgb(215, 200, 131));
+}
+
+a {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Navigation */
+#nav-bar {
+    background-color: rgb(43, 43, 43);
+    color: white;
+    height: 200px;
+    width: 100%;
+    float: right;
+}
+
+#table-pages {
+    margin-top: 20px;
+    margin-left: 100px;
+}
+
+#table-auth {
+    margin-top: -25px;
+    margin-left: 400px;
+    margin-right: 100px;
+    float: right;
+}
+
+#nav-auth {
+    font-size: 12px;
+}
+
+#nav-spacer {
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+}
+
+.button {
+    padding: 10px 14px;
+    color: white;
+    background: none;
+    border: 1.5px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.button:hover {
+    color: lightblue;
+    border-color: lightblue;
+}
+
+/* PAGES */
+#page-header {
+    margin-top: 200px;
+    height: 100px;
+    color: white;
+    background-color: rgb(43, 43, 43);
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+/* Home Page */
+#welcome-tab {
+    margin-top: 200px;
+    height: 300px;
+    color: white;
+    background-color: rgb(43, 43, 43);
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+}
+
+#logo {
+    max-height: 200px;
+}
+#home-content {
+    margin-left: 200px;
+
+}
+
+/* Shop page */
+#shop-table {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#shop-image {
+    max-width: 200px;
+    max-height: 200px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#br-shop {
+    border-bottom: 2px solid black;
+    padding-top: 50px;
+}
+
+.shop-button {
+    width: 80px;
+    padding: 10px 14px;
+    color: black;
+    background-color: none;
+    background: none;
+    border: 1.5px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.shop-button:hover {
+    color: lightblue;
+    border-color: lightblue;
+}
+
+#item {
+    width: 400px;
+}
+
+#search-bar {
+    margin-left: 20px;
+}
+
+#search-table {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#search-result-name {
+    color: rgb(106, 162, 182);
+}
+
+#purchase-response {
+    font-size: 12px;
+    color: rgb(106, 162, 182);
+}
+
+/* Game */
+#game {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+}
+
+#chess-game {
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    margin-bottom: 50px;
+}
+
+.chessboard-table {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    background-color: aliceblue;
+}
+
+.chessboard-table th {
+    width: 50px;
+    height: 50px;
+    border: none;
+}
+
+.chessboard-table img {
+    margin-bottom: -5px;
+}
+
+.chessboard-table, .chessboard-table tr, .chessboard-table td {
+    border: 1px solid black;
+}
+
+.chessboard-table tr:nth-of-type(even) td:nth-of-type(odd), .chessboard-table tr:nth-of-type(odd) td:nth-of-type(even) {
+    color: white;
+    background-color: white;
+    width: 50px;
+    height: 50px;
+}
+
+.chessboard-table tr:nth-of-type(even) td:nth-of-type(even), .chessboard-table tr:nth-of-type(odd) td:nth-of-type(odd) {
+    color: grey;
+    background-color: grey;
+    width: 50px;
+    height: 50px;
+}
+
+.play-button {
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 14px;
+    font-size: 20px;
+    color: black;
+    background-color: none;
+    background: none;
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.play-button:hover {
+    color: lightblue;
+    border-color: lightblue;
+}
+
+.game-button {
+    width: 200px;
+    padding: 10px 14px;
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+    background-color: none;
+    background: none;
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.game-button:hover {
+    color: lightblue;
+    border-color: lightblue;
+}
+
+/* Guest Book */
+.column {
+    float: left;
+    width: 50%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#comment {
+    width: 250px;
+    height: 100px;
+    border: none;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+#name {
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+}
+
+#comment-form {
+    border-radius: 30px;;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+
+    max-width: 400px;
+    height: 200px;
+    background-color: lightgray;
+}
+
+#comments-frame {
+    height: 450px;
+    width: 100%;
+    border: none;
+}
+
+/* Login */
+#login-form {
+    margin-top: 10%;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+}
+
+#login-response {
+    margin-top: 0%;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+}
+
+#user {
+    color: grey;
+    padding-left: 10px;
+}
+
+/* Registration */
+#registration-form {
+    margin-top: 10%;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+}
+
+#registration-response {
+    margin-top: 0%;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+}
+
+#registration-response-error {
+    font-size: 12px;
+    color: red;
+}
+
+#registration-response-success {
+    font-size: 12px;
+    color: rgb(103, 210, 143);
+}
+
+/* Footer */
+footer {
+    background-color: rgb(43, 43, 43);
+    color: rgb(150, 127, 218);
+    display: table-row;
+}
+
+footer p {
+    margin-left: 100px;
+}
